@@ -108,95 +108,108 @@ function Home() {
   return (
     <>
       {/* ---------------- HERO ---------------- */}
-      <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
+      <section className="relative overflow-hidden pt-28 pb-16 md:pt-40 md:pb-24">
         <img
           src={heroImg}
           alt="Lithium-ion cylindrical cells and a dismantled EV battery pack module"
           width={1600}
           height={1104}
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" aria-hidden />
         <div className="absolute inset-0 grid-backdrop" aria-hidden />
-        <div className="absolute inset-0 haze" aria-hidden />
+        <div className="absolute inset-0 hero-glow" aria-hidden />
 
-        <Container className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <Eyebrow>Battery Recycling | Critical Minerals | Battery Materials</Eyebrow>
-            <h1 className="mt-6 text-4xl leading-[1.02] font-semibold md:text-6xl lg:text-[4.5rem]">
-              From Battery Waste to{" "}
-              <span className="text-primary">Critical Battery Materials.</span>
-            </h1>
-            <p className="mt-5 max-w-xl font-display text-lg text-foreground/80 md:text-xl">
-              Building the circular supply chain for the next generation of batteries.
-            </p>
-            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              Black Mass Energies recycles lithium-ion batteries, produces chemistry-specific
-              Black Mass, recovers critical minerals through hydrometallurgy and develops the
-              next generation of battery-grade materials.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <CtaLink to="/technology">
-                Explore Our Technology <ArrowRight className="h-4 w-4" />
-              </CtaLink>
-              <CtaLink to="/contact" variant="outline">
-                Partner With Us
-              </CtaLink>
-              <CtaLink to="/contact" variant="ghost">
-                Sell Battery Scrap
-              </CtaLink>
+        <Container className="relative">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <div className="hero-in" style={{ animationDelay: "60ms" }}>
+                <Eyebrow>Battery Recycling | Critical Minerals | Battery Materials</Eyebrow>
+              </div>
+              <h1 className="mt-6 text-4xl leading-[1.04] font-semibold md:text-6xl lg:text-[4.2rem]">
+                <span className="block hero-in" style={{ animationDelay: "140ms" }}>
+                  Recover and <span className="text-primary">refine</span>
+                </span>
+                <span className="block hero-in" style={{ animationDelay: "240ms" }}>
+                  <span className="text-primary">battery</span> materials
+                </span>
+              </h1>
+              <p
+                className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base hero-in"
+                style={{ animationDelay: "340ms" }}
+              >
+                Black Mass Energies recycles lithium-ion batteries, produces chemistry-specific
+                Black Mass and recovers critical minerals through hydrometallurgy, building the
+                circular supply chain for the next generation of batteries.
+              </p>
+              <div
+                className="mt-8 flex flex-wrap gap-3 hero-in"
+                style={{ animationDelay: "440ms" }}
+              >
+                <CtaLink to="/contact">
+                  Contact Us <ArrowRight className="h-4 w-4" />
+                </CtaLink>
+                <CtaLink to="/technology" variant="outline">
+                  Our Technology
+                </CtaLink>
+              </div>
             </div>
 
-            <dl className="mt-14 grid max-w-lg grid-cols-3 gap-px border border-border bg-border">
-              {[
-                ["Process", "Recycling"],
-                ["Material", "Black Mass"],
-                ["Chemistry", "LCO / NMC / LFP"],
-              ].map(([k, v]) => (
-                <div key={k} className="bg-background p-4">
-                  <dt className="tech-label text-primary">{k}</dt>
-                  <dd className="mt-2 text-sm font-medium">{v}</dd>
-                </div>
-              ))}
-            </dl>
+            {/* Hero material-flow visualization */}
+            <div
+              className="relative border border-border bg-surface/50 p-6 backdrop-blur-sm md:p-8 hero-in"
+              style={{ animationDelay: "520ms" }}
+            >
+              <div className="flex items-center justify-between border-b border-border pb-4">
+                <span className="tech-label text-primary">Material Flow</span>
+                <span className="tech-label text-muted-foreground">Source → Supply</span>
+              </div>
+              <div className="mt-4 h-px w-full flow-line" aria-hidden />
+              <ol className="mt-6 space-y-px bg-border">
+                {[
+                  ["Battery Cell / Pack", "Feedstock"],
+                  ["Battery Scrap", "Collection"],
+                  ["Black Mass", "LCO | NMC | LFP"],
+                  ["Hydrometallurgy", "Leach → Purify"],
+                  ["Li | Ni | Co | Mn", "Critical minerals"],
+                  ["Battery-Grade Materials", "Refined products"],
+                  ["Battery Manufacturing", "Return to supply chain"],
+                ].map(([label, sub], i) => (
+                  <li
+                    key={label}
+                    className="group flex items-center justify-between gap-4 bg-background px-4 py-3.5 transition-colors hover:bg-surface"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="tech-label text-muted-foreground">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-sm font-medium">{label}</span>
+                    </div>
+                    <span className="hidden font-mono text-[0.65rem] tracking-widest text-muted-foreground uppercase sm:block">
+                      {sub}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
 
-          {/* Hero material-flow visualization */}
-          <div className="relative border border-border bg-surface/50 p-6 backdrop-blur-sm md:p-8">
-            <div className="flex items-center justify-between border-b border-border pb-4">
-              <span className="tech-label text-primary">Material Flow</span>
-              <span className="tech-label text-muted-foreground">Source → Supply</span>
-            </div>
-            <div className="mt-4 h-px w-full flow-line" aria-hidden />
-            <ol className="mt-6 space-y-px bg-border">
-              {[
-                ["Battery Cell / Pack", "Feedstock"],
-                ["Battery Scrap", "Collection"],
-                ["Black Mass", "LCO | NMC | LFP"],
-                ["Hydrometallurgy", "Leach → Purify"],
-                ["Li | Ni | Co | Mn", "Critical minerals"],
-                ["Battery-Grade Materials", "Refined products"],
-                ["Battery Manufacturing", "Return to supply chain"],
-              ].map(([label, sub], i) => (
-                <li
-                  key={label}
-                  className="group flex items-center justify-between gap-4 bg-background px-4 py-3.5 transition-colors hover:bg-surface"
-                >
-                  <div className="flex items-center gap-4">
-                    <span className="tech-label text-muted-foreground">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-sm font-medium">{label}</span>
-                  </div>
-                  <span className="hidden font-mono text-[0.65rem] tracking-widest text-muted-foreground uppercase sm:block">
-                    {sub}
-                  </span>
-                </li>
-              ))}
-            </ol>
+          {/* Sector strip, as in the reference layout */}
+          <div className="relative mt-14 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3 lg:grid-cols-6">
+            {industries.map((s, i) => (
+              <div
+                key={s.t}
+                className="group flex flex-col items-start gap-3 bg-background p-5 transition-colors hover:bg-surface hero-in"
+                style={{ animationDelay: `${600 + i * 70}ms` }}
+              >
+                <s.icon className="h-5 w-5 text-primary transition-transform duration-300 group-hover:-translate-y-0.5" />
+                <span className="text-[0.8rem] leading-snug font-medium">{s.t}</span>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
+
 
       {/* ---------------- CORE VISUAL STORY ---------------- */}
       <Section tone="surface">
