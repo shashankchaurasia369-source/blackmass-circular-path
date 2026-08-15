@@ -48,7 +48,7 @@ export function InquiryForm({
       });
     } catch {
       toast.error("Could not send your inquiry", {
-        description: "Please try again or write to info@blackmaskenergies.com.",
+        description: "Please try again or write to info@blackmassenergies.com.",
       });
     } finally {
       setSubmitting(false);

@@ -55,10 +55,10 @@ function Page() {
           <p className="mt-6 text-sm text-muted-foreground">
             Prefer email? Write to{" "}
             <a
-              href="mailto:info@blackmaskenergies.com"
+              href="mailto:info@blackmassenergies.com"
               className="text-primary hover:underline"
             >
-              info@blackmaskenergies.com
+              info@blackmassenergies.com
             </a>
           </p>
         </Container>

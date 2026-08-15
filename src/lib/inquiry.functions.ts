@@ -59,7 +59,7 @@ export const sendInquiry = createServerFn({ method: "POST" })
         from:
           process.env["INQUIRY_FROM_EMAIL"] ??
           "Black Mass Energies <onboarding@resend.dev>",
-        to: [process.env["INQUIRY_TO_EMAIL"] ?? "info@blackmaskenergies.com"],
+        to: [process.env["INQUIRY_TO_EMAIL"] ?? "info@blackmassenergies.com"],
         reply_to: data.email,
         subject: `Website inquiry from ${data.name}`,
         html,

@@ -111,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Integrated battery recycling and critical battery materials company building the circular supply chain.",
           address: { "@type": "PostalAddress", addressCountry: "IN" },
-          email: "info@blackmaskenergies.com",
+          email: "info@blackmassenergies.com",
         }),
       },
     ],
