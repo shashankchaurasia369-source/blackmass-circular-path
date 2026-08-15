@@ -19,7 +19,7 @@ function esc(value: string) {
 }
 
 export const sendInquiry = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => inquirySchema.parse(data))
+  .validator((data: unknown) => inquirySchema.parse(data))
   .handler(async ({ data }) => {
     const apiKey = process.env["RESEND_API_KEY"];
     if (!apiKey) {
