@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { Nav, MobileStickyCta } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -41,7 +41,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+
   }, [error]);
 
   return (
@@ -106,8 +106,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Black Mass Energies Pvt. Ltd.",
-          url: "https://blackmass-circular-path.lovable.app",
-          logo: "https://blackmass-circular-path.lovable.app/favicon.png",
+          url: "https://blackmasswebsite-sandy.vercel.app",
+          logo: "https://blackmasswebsite-sandy.vercel.app/favicon.png",
           description:
             "Integrated battery recycling and critical battery materials company building the circular supply chain.",
           address: { "@type": "PostalAddress", addressCountry: "IN" },

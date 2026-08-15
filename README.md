@@ -1828,7 +1828,7 @@ Supporting statement:
 
 We recycle lithium-ion batteries, produce LCO, NMC and LFP Black Mass, recover critical minerals through hydrometallurgy and develop the materials needed to close the battery supply chain.
 
-48. FINAL INSTRUCTION TO LOVABLE
+48. FINAL INSTRUCTIONS
 
 Build this as a premium industrial technology website, not a template website.
 
@@ -1890,17 +1890,7 @@ Prioritize technical credibility, industrial trust, premium design and commercia
 
 Build the complete responsive website with all pages, navigation, reusable components, forms, animations, SEO metadata and production-ready UI.
 
-This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://blackmass-circular-path.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0a4fe953-4e8e-45fb-a964-13871a502cab).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 

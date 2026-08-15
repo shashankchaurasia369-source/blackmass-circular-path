@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://blackmass-circular-path.lovable.app/sitemap.xml
+Sitemap: https://blackmasswebsite-sandy.vercel.app/sitemap.xml
