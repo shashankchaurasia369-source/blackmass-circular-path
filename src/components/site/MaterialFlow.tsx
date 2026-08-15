@@ -3,8 +3,8 @@ import { Reveal } from "./primitives";
 
 export type FlowNode = {
   label: string;
-  sub?: string;
-  stage?: string;
+  sub?: string | undefined;
+  stage?: string | undefined;
 };
 
 /**
@@ -17,8 +17,8 @@ export function MaterialFlow({
   className,
 }: {
   nodes: FlowNode[];
-  tone?: "dark" | "light";
-  className?: string;
+  tone?: "dark" | "light" | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div className={cn("relative", className)}>
@@ -131,8 +131,8 @@ export function ProcessStrip({
   className,
 }: {
   steps: string[];
-  tone?: "dark" | "light";
-  className?: string;
+  tone?: "dark" | "light" | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div

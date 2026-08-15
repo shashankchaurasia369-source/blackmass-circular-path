@@ -13,11 +13,11 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: ReactNode;
-  lead?: ReactNode;
-  image?: string;
-  imageAlt?: string;
-  actions?: { label: string; to: string; hash?: string; variant?: "primary" | "outline" }[];
-  className?: string;
+  lead?: ReactNode | undefined;
+  image?: string | undefined;
+  imageAlt?: string | undefined;
+  actions?: { label: string | undefined; to: string; hash?: string; variant?: "primary" | "outline" }[];
+  className?: string | undefined;
 }) {
   return (
     <section className={cn("relative overflow-hidden border-b border-border pt-32 pb-16 md:pt-44 md:pb-24", className)}>

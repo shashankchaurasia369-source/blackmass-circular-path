@@ -10,8 +10,8 @@ export function Reveal({
   className,
 }: {
   children: ReactNode;
-  delay?: number;
-  className?: string;
+  delay?: number | undefined;
+  className?: string | undefined;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -51,7 +51,7 @@ export function Container({
   className,
 }: {
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <div className={cn("mx-auto w-full max-w-[1320px] px-5 md:px-8", className)}>
@@ -67,9 +67,9 @@ export function Section({
   id,
 }: {
   children: ReactNode;
-  className?: string;
-  tone?: "dark" | "surface" | "light";
-  id?: string;
+  className?: string | undefined;
+  tone?: "dark" | "surface" | "light" | undefined;
+  id?: string | undefined;
 }) {
   return (
     <section
@@ -95,8 +95,8 @@ export function Eyebrow({
   className,
 }: {
   children: ReactNode;
-  tone?: "dark" | "light";
-  className?: string;
+  tone?: "dark" | "light" | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div
@@ -126,12 +126,12 @@ export function SectionHeading({
   align = "left",
   className,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   title: ReactNode;
-  lead?: ReactNode;
-  tone?: "dark" | "light";
-  align?: "left" | "center";
-  className?: string;
+  lead?: ReactNode | undefined;
+  tone?: "dark" | "light" | undefined;
+  align?: "left" | "center" | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div
@@ -189,11 +189,11 @@ export function SiteLink({
   activeClassName,
 }: {
   to: string;
-  hash?: string;
-  className?: string;
+  hash?: string | undefined;
+  className?: string | undefined;
   children: ReactNode;
-  onClick?: () => void;
-  activeClassName?: string;
+  onClick?: () => void | undefined;
+  activeClassName?: string | undefined;
 }) {
   const extra = {
     ...(hash ? { hash } : {}),
@@ -221,10 +221,10 @@ export function CtaLink({
 }: {
   to: string;
   children: ReactNode;
-  variant?: CtaVariant;
-  className?: string;
-  hash?: string;
-  onClick?: () => void;
+  variant?: CtaVariant | undefined;
+  className?: string | undefined;
+  hash?: string | undefined;
+  onClick?: () => void | undefined;
 }) {
   return (
     <SiteLink
@@ -260,11 +260,11 @@ export function TechCard({
   tone = "dark",
   className,
 }: {
-  index?: string;
+  index?: string | undefined;
   title: ReactNode;
-  children?: ReactNode;
-  tone?: "dark" | "light";
-  className?: string;
+  children?: ReactNode | undefined;
+  tone?: "dark" | "light" | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div
