@@ -71,13 +71,6 @@ export function Nav() {
               {l.label}
             </SiteLink>
           ))}
-          <SiteLink
-            to="/about"
-            className="text-[0.82rem] text-foreground/70 transition-colors hover:text-primary"
-            activeClassName="text-primary"
-          >
-            About
-          </SiteLink>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
