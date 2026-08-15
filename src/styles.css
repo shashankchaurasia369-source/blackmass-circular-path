@@ -47,13 +47,23 @@
   --color-inverse-foreground: var(--inverse-foreground);
   --color-inverse-muted: var(--inverse-muted);
   --color-inverse-border: var(--inverse-border);
+  --color-brand-green: var(--brand-green);
+  --color-brand-black: var(--brand-black);
+  --color-pure-white: var(--pure-white);
+
 }
 
 :root {
   --radius: 0.25rem;
 
+  /* Official logo brand colours (source of truth) */
+  --brand-green: #83d114;
+  --brand-black: #000000;
+  --pure-white: #ffffff;
+
   /* Base: near-black with a deep green cast */
   --background: oklch(0.16 0.014 165);
+
   --foreground: oklch(0.96 0.006 160);
   --surface: oklch(0.2 0.015 165);
   --surface-2: oklch(0.24 0.016 166);
