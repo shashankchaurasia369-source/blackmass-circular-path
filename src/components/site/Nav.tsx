@@ -106,12 +106,9 @@ export function Nav() {
                 {l.label}
               </SiteLink>
             ))}
-            <div className="mt-8 flex flex-col gap-3">
-              <CtaLink to="/contact" onClick={() => setOpen(false)}>
-                Get in Touch
-              </CtaLink>
-              <CtaLink to="/contact" variant="outline">
-                Partner With Us
+            <div className="mt-8">
+              <CtaLink to="/contact" onClick={() => setOpen(false)} className="w-full">
+                Contact Us
               </CtaLink>
             </div>
           </Container>
@@ -123,19 +120,12 @@ export function Nav() {
 
 export function MobileStickyCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-px border-t border-border bg-border lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border lg:hidden">
       <SiteLink
         to="/contact"
-        className="bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
+        className="block bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
       >
-        Partner With Us
-      </SiteLink>
-      <SiteLink
-        to="/contact"
-
-        className="bg-background py-3.5 text-center text-sm font-medium text-foreground"
-      >
-        Sell Scrap
+        Contact Us
       </SiteLink>
     </div>
   );
