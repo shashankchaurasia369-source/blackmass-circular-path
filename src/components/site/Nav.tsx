@@ -7,11 +7,11 @@ import logoMark from "@/assets/black-mass-logo-trim.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/battery-recycling", label: "Battery Recycling" },
-  { to: "/black-mass", label: "Black Mass" },
-  { to: "/critical-minerals", label: "Critical Minerals" },
   { to: "/technology", label: "Technology" },
-  { to: "/global-supply", label: "Global Supply" },
+  { to: "/black-mass", label: "Black Mass" },
+  { to: "/global-supply", label: "Supply Chain" },
+  { to: "/battery-recycling", label: "Infrastructure" },
+  { to: "/critical-minerals", label: "Critical Minerals" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -26,13 +26,14 @@ export function Wordmark({ className }: { className?: string }) {
         height={110}
         className="h-10 w-auto shrink-0 md:h-12"
       />
-      <span className="font-display text-[1.05rem] leading-none font-bold tracking-tight text-inverse-foreground sm:text-[1.15rem]">
-        BLACK MASS
-        <span className="ml-1 font-normal text-inverse-muted">ENERGIES</span>
+      <span className="font-display text-[1.05rem] leading-none font-bold tracking-tight sm:text-[1.15rem]">
+        <span className="text-brand-black">BLACK MASS</span>
+        <span className="ml-1 font-normal text-brand-green">ENERGIES</span>
       </span>
     </Link>
   );
 }
+
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
