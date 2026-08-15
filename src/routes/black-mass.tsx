@@ -11,7 +11,7 @@ import {
 } from "@/components/site/primitives";
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "Black Mass | LCO, NMC & LFP | BlackMass Energies";
+const TITLE = "Black Mass | LCO, NMC & LFP | Black Mass Energies";
 const DESC =
   "Chemistry-specific Black Mass from lithium-ion battery feedstocks across LCO, NMC and LFP streams, produced with a focus on downstream recovery economics.";
 

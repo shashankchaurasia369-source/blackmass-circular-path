@@ -30,9 +30,9 @@ import {
 } from "@/components/site/MaterialFlow";
 import { CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "BlackMass Energies | Battery Recycling & Critical Battery Materials";
+const TITLE = "Black Mass Energies | Battery Recycling & Critical Battery Materials";
 const DESC =
-  "BlackMass Energies is an integrated battery recycling and critical battery materials company recovering valuable materials from lithium-ion batteries through Black Mass production, hydrometallurgy and advanced materials development.";
+  "Black Mass Energies is an integrated battery recycling and critical battery materials company recovering valuable materials from lithium-ion batteries through Black Mass production, hydrometallurgy and advanced materials development.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,8 +58,8 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "BlackMass Energies Pvt. Ltd.",
-          alternateName: "BlackMass Energies",
+          name: "Black Mass Energies Pvt. Ltd.",
+          alternateName: "Black Mass Energies",
           description: DESC,
           foundingDate: "2024-06",
           address: { "@type": "PostalAddress", addressCountry: "IN" },
@@ -98,7 +98,7 @@ const pillars = [
 ];
 
 const journey = [
-  { when: "June 2024", what: "BlackMass Energies Founded" },
+  { when: "June 2024", what: "Black Mass Energies Founded" },
   { when: "2024–2025", what: "Battery Recycling & Black Mass Development" },
   { when: "2026", what: "Expansion Into Critical Mineral Recovery & Advanced Materials" },
   { when: "April 2026", what: "First Pre-Seed Round" },
@@ -131,7 +131,7 @@ function Home() {
               Building the circular supply chain for the next generation of batteries.
             </p>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              BlackMass Energies recycles lithium-ion batteries, produces chemistry-specific
+              Black Mass Energies recycles lithium-ion batteries, produces chemistry-specific
               Black Mass, recovers critical minerals through hydrometallurgy and develops the
               next generation of battery-grade materials.
             </p>
@@ -216,7 +216,7 @@ function Home() {
             className="mt-16"
             nodes={[
               { stage: "Input", label: "Battery Waste", sub: "OEM & market feedstock" },
-              { stage: "Operator", label: "BlackMass Energies", sub: "Integrated processing" },
+              { stage: "Operator", label: "Black Mass Energies", sub: "Integrated processing" },
               { stage: "Product", label: "Black Mass", sub: "LCO | NMC | LFP" },
               { stage: "Process", label: "Hydrometallurgy", sub: "Selective recovery" },
               { stage: "Elements", label: "Critical Minerals", sub: "Li | Ni | Co | Mn" },
@@ -235,7 +235,7 @@ function Home() {
             <SectionHeading
               eyebrow="Introduction"
               title="The battery is only the beginning."
-              lead="Every lithium-ion battery contains critical materials that must remain within the industrial supply chain. BlackMass Energies is building the infrastructure to recover those materials, refine them and return them to the battery ecosystem."
+              lead="Every lithium-ion battery contains critical materials that must remain within the industrial supply chain. Black Mass Energies is building the infrastructure to recover those materials, refine them and return them to the battery ecosystem."
             />
             <div className="mt-8 flex flex-wrap gap-3">
               <CtaLink to="/battery-recycling" variant="outline">
@@ -513,7 +513,7 @@ function Home() {
       {/* ---------------- WHY ---------------- */}
       <Section tone="surface">
         <Container>
-          <SectionHeading eyebrow="Why BlackMass Energies" title="More than recycling." />
+          <SectionHeading eyebrow="Why Black Mass Energies" title="More than recycling." />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
             {pillars.map((p, i) => (
               <Reveal key={p.n} delay={i * 60}>
@@ -532,7 +532,7 @@ function Home() {
           <SectionHeading
             eyebrow="Company Journey"
             title="Built to close the battery materials loop."
-            lead="BlackMass Energies was founded in June 2024 with a focus on building a scalable battery recycling and material recovery business. The company began with lithium-ion battery recycling and Black Mass production, and is expanding downstream into hydrometallurgical recovery, critical minerals and advanced battery materials."
+            lead="Black Mass Energies was founded in June 2024 with a focus on building a scalable battery recycling and material recovery business. The company began with lithium-ion battery recycling and Black Mass production, and is expanding downstream into hydrometallurgical recovery, critical minerals and advanced battery materials."
           />
           <ol className="relative border-l border-border pl-8">
             {journey.map((j, i) => (

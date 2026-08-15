@@ -3,9 +3,9 @@ import { Container, Section } from "@/components/site/primitives";
 import { PageHero } from "@/components/site/PageHero";
 import { InquiryForm } from "@/components/site/InquiryForm";
 
-const TITLE = "Contact BlackMass Energies | Battery Recycling & Materials";
+const TITLE = "Contact Black Mass Energies | Battery Recycling & Materials";
 const DESC =
-  "Send one short inquiry to BlackMass Energies for battery scrap, Black Mass, critical minerals or partnership discussions.";
+  "Send one short inquiry to Black Mass Energies for battery scrap, Black Mass, critical minerals or partnership discussions.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

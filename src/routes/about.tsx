@@ -10,9 +10,9 @@ import {
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 import { CircularLoop } from "@/components/site/MaterialFlow";
 
-const TITLE = "About BlackMass Energies | Integrated Battery Materials Company";
+const TITLE = "About Black Mass Energies | Integrated Battery Materials Company";
 const DESC =
-  "BlackMass Energies is an integrated battery recycling and critical battery materials company building the circular supply chain from battery scrap to Black Mass to refined critical materials.";
+  "Black Mass Energies is an integrated battery recycling and critical battery materials company building the circular supply chain from battery scrap to Black Mass to refined critical materials.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const journey = [
-  { when: "June 2024", what: "BlackMass Energies Founded" },
+  { when: "June 2024", what: "Black Mass Energies Founded" },
   { when: "2024–2025", what: "Battery Recycling & Black Mass Development" },
   { when: "2026", what: "Expansion Into Critical Mineral Recovery & Advanced Materials" },
   { when: "April 2026", what: "First Pre-Seed Round" },
@@ -52,7 +52,7 @@ function Page() {
       <PageHero
         eyebrow="About"
         title={<>Built to Close the Battery Materials Loop.</>}
-        lead="BlackMass Energies is an integrated battery recycling and critical battery materials company building the circular supply chain from battery scrap to Black Mass to refined critical materials and advanced battery materials."
+        lead="Black Mass Energies is an integrated battery recycling and critical battery materials company building the circular supply chain from battery scrap to Black Mass to refined critical materials and advanced battery materials."
         actions={[
           { label: "Explore Our Technology", to: "/technology" },
           { label: "Partner With Us", to: "/contact", variant: "outline" },
@@ -65,7 +65,7 @@ function Page() {
             <SectionHeading
               eyebrow="Company Story"
               title="A recycler becoming a materials company."
-              lead="BlackMass Energies was founded in June 2024 with a focus on building a scalable battery recycling and material recovery business. The company began by focusing on lithium-ion battery recycling and Black Mass production, and is expanding downstream into hydrometallurgical recovery, critical minerals and advanced battery materials."
+              lead="Black Mass Energies was founded in June 2024 with a focus on building a scalable battery recycling and material recovery business. The company began by focusing on lithium-ion battery recycling and Black Mass production, and is expanding downstream into hydrometallurgical recovery, critical minerals and advanced battery materials."
             />
           </Reveal>
           <Reveal delay={120}>
@@ -97,7 +97,7 @@ function Page() {
 
       <Section>
         <Container>
-          <SectionHeading eyebrow="Why BlackMass Energies" title="More than recycling." />
+          <SectionHeading eyebrow="Why Black Mass Energies" title="More than recycling." />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
             {pillars.map((p, i) => (
               <Reveal key={p.n} delay={i * 60}>
