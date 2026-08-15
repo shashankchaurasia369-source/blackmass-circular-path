@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Container, CtaLink, SiteLink } from "./primitives";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -17,15 +18,18 @@ const links = [
 
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <Link
-      to="/"
-      className={cn(
-        "font-display text-[1.05rem] leading-none font-bold tracking-tight",
-        className,
-      )}
-    >
-      BLACKMASS<span className="text-primary">&nbsp;/</span>
-      <span className="ml-1 font-normal opacity-70">ENERGIES</span>
+    <Link to="/" className={cn("flex items-center gap-2.5", className)}>
+      <img
+        src={logoMark.url}
+        alt="BlackMass Energies logo"
+        width={36}
+        height={36}
+        className="h-8 w-8 shrink-0 md:h-9 md:w-9"
+      />
+      <span className="font-display text-[0.95rem] leading-none font-bold tracking-tight sm:text-[1.05rem]">
+        BLACKMASS<span className="text-primary">&nbsp;/</span>
+        <span className="ml-1 font-normal opacity-70">ENERGIES</span>
+      </span>
     </Link>
   );
 }
@@ -74,11 +78,8 @@ export function Nav() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <CtaLink to="/contact" variant="outline" className="px-4 py-2 text-[0.8rem]">
-            Partner With Us
-          </CtaLink>
-          <CtaLink to="/contact" className="px-4 py-2 text-[0.8rem]">
-            Get in Touch
+          <CtaLink to="/contact" className="px-5 py-2 text-[0.8rem]">
+            Contact Us
           </CtaLink>
         </div>
 
@@ -105,12 +106,9 @@ export function Nav() {
                 {l.label}
               </SiteLink>
             ))}
-            <div className="mt-8 flex flex-col gap-3">
-              <CtaLink to="/contact" onClick={() => setOpen(false)}>
-                Get in Touch
-              </CtaLink>
-              <CtaLink to="/contact" variant="outline">
-                Partner With Us
+            <div className="mt-8">
+              <CtaLink to="/contact" onClick={() => setOpen(false)} className="w-full">
+                Contact Us
               </CtaLink>
             </div>
           </Container>
@@ -122,19 +120,12 @@ export function Nav() {
 
 export function MobileStickyCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-px border-t border-border bg-border lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border lg:hidden">
       <SiteLink
         to="/contact"
-        className="bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
+        className="block bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
       >
-        Partner With Us
-      </SiteLink>
-      <SiteLink
-        to="/contact"
-        hash="sell-battery-scrap"
-        className="bg-background py-3.5 text-center text-sm font-medium text-foreground"
-      >
-        Sell Scrap
+        Contact Us
       </SiteLink>
     </div>
   );

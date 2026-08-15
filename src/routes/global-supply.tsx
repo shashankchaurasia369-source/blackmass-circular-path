@@ -8,7 +8,7 @@ import {
 } from "@/components/site/primitives";
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "Global Supply — Battery Materials Sourcing & Supply | BlackMass Energies";
+const TITLE = "Global Supply | Battery Materials Sourcing & Supply | BlackMass Energies";
 const DESC =
   "We work with global companies across the battery and critical-material ecosystem to source, process and supply battery materials, with India as our operating base.";
 
@@ -50,7 +50,7 @@ function Page() {
   return (
     <>
       <PageHero
-        eyebrow="Step 06 — Supply"
+        eyebrow="Step 06 | Supply"
         title={<>Critical Battery Materials Without Borders.</>}
         lead="We work with global companies across the battery and critical-material ecosystem to source, process and supply battery materials."
         actions={[

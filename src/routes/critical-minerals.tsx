@@ -9,7 +9,7 @@ import {
 } from "@/components/site/primitives";
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "Critical Minerals — Lithium, Nickel, Cobalt, Manganese | BlackMass Energies";
+const TITLE = "Critical Minerals | Lithium, Nickel, Cobalt, Manganese | BlackMass Energies";
 const DESC =
   "Recovering lithium, nickel, cobalt and manganese from Black Mass through hydrometallurgy and converting them into high-purity battery material products.";
 
@@ -57,13 +57,13 @@ function Page() {
   return (
     <>
       <PageHero
-        eyebrow="Step 04 / 05 — Recovery"
+        eyebrow="Step 04 / 05 | Recovery"
         title={<>Recovering the Elements That Power the Battery Economy.</>}
         lead="Lithium-ion batteries contain a concentrated set of critical minerals. Our hydrometallurgical technology focuses on selectively recovering these materials and converting them into high-purity products."
         image={mineralsImg}
         imageAlt="Battery-grade lithium, nickel and cobalt salts"
         actions={[
-          { label: "Request Critical Materials", to: "/contact", hash: "buy-critical-minerals" },
+          { label: "Request Critical Materials", to: "/contact" },
           { label: "Explore Our Technology", to: "/technology", variant: "outline" },
         ]}
       />
@@ -136,7 +136,7 @@ function Page() {
             </div>
           </div>
           <div className="mt-10">
-            <CtaLink to="/contact" hash="buy-critical-minerals" variant="light">
+            <CtaLink to="/contact" variant="light">
               Request Material
             </CtaLink>
           </div>
@@ -147,7 +147,7 @@ function Page() {
         title="Specify your material requirement."
         lead="Share material, purity, quantity and application. Our team will confirm what can be supported."
         actions={[
-          { label: "Request Critical Materials", to: "/contact", hash: "buy-critical-minerals" },
+          { label: "Request Critical Materials", to: "/contact" },
           { label: "Build a Partnership", to: "/contact", variant: "outline" },
         ]}
       />

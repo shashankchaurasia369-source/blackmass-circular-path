@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Container, Section } from "@/components/site/primitives";
 import { PageHero } from "@/components/site/PageHero";
 
-const TITLE = "Legal — Privacy, Terms & Disclaimer | BlackMass Energies";
+const TITLE = "Legal | Privacy, Terms & Disclaimer | BlackMass Energies";
 const DESC =
   "Privacy policy, terms of use and disclaimer for the BlackMass Energies Pvt. Ltd. website and material inquiries.";
 
@@ -28,7 +28,7 @@ const blocks = [
     id: "privacy",
     title: "Privacy Policy",
     body: [
-      "We collect only the information you submit through our inquiry forms — such as your name, company, contact details, country and material requirement — and use it solely to respond to and evaluate your inquiry.",
+      "We collect only the information you submit through our inquiry forms | such as your name, company, contact details, country and material requirement | and use it solely to respond to and evaluate your inquiry.",
       "Documents you upload, including certificates of analysis, are treated as commercially confidential and are shared internally only with the team members handling your request.",
       "We do not sell personal data. To request access, correction or deletion of your information, contact us through the contact page.",
     ],

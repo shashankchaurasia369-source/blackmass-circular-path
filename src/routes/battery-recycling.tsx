@@ -54,7 +54,7 @@ function Page() {
   return (
     <>
       <PageHero
-        eyebrow="Step 01 / 02 — Recycling"
+        eyebrow="Step 01 / 02 | Recycling"
         title={<>Recovering Value From Every Battery.</>}
         lead="We source and recycle lithium-ion batteries from OEMs and the broader market, converting end-of-life and manufacturing battery streams into valuable secondary raw materials."
         image={heroImg}
