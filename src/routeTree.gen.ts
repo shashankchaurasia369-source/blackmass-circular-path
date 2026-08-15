@@ -10,13 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as BatteryRecyclingRouteImport } from './routes/battery-recycling'
 import { Route as BlackMassRouteImport } from './routes/black-mass'
 import { Route as CriticalMineralsRouteImport } from './routes/critical-minerals'
+import { Route as GlobalSupplyRouteImport } from './routes/global-supply'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as TechnologyRouteImport } from './routes/technology'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BatteryRecyclingRoute = BatteryRecyclingRouteImport.update({
@@ -34,44 +43,95 @@ const CriticalMineralsRoute = CriticalMineralsRouteImport.update({
   path: '/critical-minerals',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlobalSupplyRoute = GlobalSupplyRouteImport.update({
+  id: '/global-supply',
+  path: '/global-supply',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TechnologyRoute = TechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
   '/critical-minerals': typeof CriticalMineralsRoute
+  '/global-supply': typeof GlobalSupplyRoute
+  '/legal': typeof LegalRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
   '/critical-minerals': typeof CriticalMineralsRoute
+  '/global-supply': typeof GlobalSupplyRoute
+  '/legal': typeof LegalRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
   '/critical-minerals': typeof CriticalMineralsRoute
+  '/global-supply': typeof GlobalSupplyRoute
+  '/legal': typeof LegalRoute
+  '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/battery-recycling' | '/black-mass' | '/critical-minerals'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/battery-recycling' | '/black-mass' | '/critical-minerals'
-  id:
-    | '__root__'
+  fullPaths:
     | '/'
+    | '/about'
     | '/battery-recycling'
     | '/black-mass'
     | '/critical-minerals'
+    | '/global-supply'
+    | '/legal'
+    | '/technology'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/about'
+    | '/battery-recycling'
+    | '/black-mass'
+    | '/critical-minerals'
+    | '/global-supply'
+    | '/legal'
+    | '/technology'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/battery-recycling'
+    | '/black-mass'
+    | '/critical-minerals'
+    | '/global-supply'
+    | '/legal'
+    | '/technology'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   BatteryRecyclingRoute: typeof BatteryRecyclingRoute
   BlackMassRoute: typeof BlackMassRoute
   CriticalMineralsRoute: typeof CriticalMineralsRoute
+  GlobalSupplyRoute: typeof GlobalSupplyRoute
+  LegalRoute: typeof LegalRoute
+  TechnologyRoute: typeof TechnologyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -81,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/battery-recycling': {
@@ -104,14 +171,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CriticalMineralsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/global-supply': {
+      id: '/global-supply'
+      path: '/global-supply'
+      fullPath: '/global-supply'
+      preLoaderRoute: typeof GlobalSupplyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/technology': {
+      id: '/technology'
+      path: '/technology'
+      fullPath: '/technology'
+      preLoaderRoute: typeof TechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   BatteryRecyclingRoute: BatteryRecyclingRoute,
   BlackMassRoute: BlackMassRoute,
   CriticalMineralsRoute: CriticalMineralsRoute,
+  GlobalSupplyRoute: GlobalSupplyRoute,
+  LegalRoute: LegalRoute,
+  TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
