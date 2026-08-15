@@ -47,6 +47,10 @@
   --color-inverse-foreground: var(--inverse-foreground);
   --color-inverse-muted: var(--inverse-muted);
   --color-inverse-border: var(--inverse-border);
+  --color-brand-green: var(--brand-green);
+  --color-brand-black: var(--brand-black);
+  --color-pure-white: var(--pure-white);
+
 }
 
 :root {
