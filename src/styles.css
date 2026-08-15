@@ -163,7 +163,46 @@
   box-shadow: var(--glow-accent);
 }
 
+/* Hero entrance */
+@utility hero-in {
+  opacity: 0;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility hero-glow {
+  background: radial-gradient(
+    ellipse 70% 60% at 60% 40%,
+    rgb(167 243 208 / 0.16),
+    transparent 70%
+  );
+  animation: glow-breathe 9s ease-in-out infinite;
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
 /* Scroll reveal */
+
 @utility reveal {
   opacity: 0;
   transform: translateY(18px);
