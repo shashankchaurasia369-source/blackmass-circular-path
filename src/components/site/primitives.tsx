@@ -186,14 +186,19 @@ export function SiteLink({
   className,
   children,
   onClick,
+  activeClassName,
 }: {
   to: string;
   hash?: string;
   className?: string;
   children: ReactNode;
   onClick?: () => void;
+  activeClassName?: string;
 }) {
-  const extra = (hash ? { hash } : {}) as Record<string, unknown>;
+  const extra = {
+    ...(hash ? { hash } : {}),
+    ...(activeClassName ? { activeProps: { className: activeClassName } } : {}),
+  } as Record<string, unknown>;
   return (
     <Link
       to={to as never}

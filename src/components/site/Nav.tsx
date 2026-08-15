@@ -62,22 +62,22 @@ export function Nav() {
 
         <nav className="hidden items-center gap-6 xl:flex">
           {links.slice(1, 7).map((l) => (
-            <Link
+            <SiteLink
               key={l.to}
               to={l.to}
               className="text-[0.82rem] text-foreground/70 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary" }}
+              activeClassName="text-primary"
             >
               {l.label}
-            </Link>
+            </SiteLink>
           ))}
-          <Link
+          <SiteLink
             to="/about"
             className="text-[0.82rem] text-foreground/70 transition-colors hover:text-primary"
-            activeProps={{ className: "text-primary" }}
+            activeClassName="text-primary"
           >
             About
-          </Link>
+          </SiteLink>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -102,15 +102,15 @@ export function Nav() {
         <div className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-border bg-background md:top-[72px] xl:hidden">
           <Container className="flex flex-col py-6">
             {links.map((l) => (
-              <Link
+              <SiteLink
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
                 className="border-b border-border py-4 font-display text-xl font-medium"
-                activeProps={{ className: "text-primary" }}
+                activeClassName="text-primary"
               >
                 {l.label}
-              </Link>
+              </SiteLink>
             ))}
             <div className="mt-8 flex flex-col gap-3">
               <CtaLink to="/contact" onClick={() => setOpen(false)}>
@@ -130,19 +130,19 @@ export function Nav() {
 export function MobileStickyCta() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-px border-t border-border bg-border lg:hidden">
-      <Link
+      <SiteLink
         to="/contact"
         className="bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
       >
         Partner With Us
-      </Link>
-      <Link
+      </SiteLink>
+      <SiteLink
         to="/contact"
         hash="sell-battery-scrap"
         className="bg-background py-3.5 text-center text-sm font-medium text-foreground"
       >
         Sell Scrap
-      </Link>
+      </SiteLink>
     </div>
   );
 }
