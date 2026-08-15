@@ -72,7 +72,7 @@ export function CtaBand({
 }: {
   title: string;
   lead: string;
-  actions: { label: string; to: string; hash?: string; variant?: "primary" | "outline" }[];
+  actions: { label: string; to: string; hash?: string | undefined; variant?: ("primary" | "outline") | undefined }[];
 }) {
   return (
     <section className="relative overflow-hidden border-y border-border bg-surface py-20 md:py-24">

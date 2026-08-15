@@ -192,7 +192,7 @@ export function SiteLink({
   hash?: string | undefined;
   className?: string | undefined;
   children: ReactNode;
-  onClick?: () => void | undefined;
+  onClick?: (() => void) | undefined;
   activeClassName?: string | undefined;
 }) {
   const extra = {
@@ -224,7 +224,7 @@ export function CtaLink({
   variant?: CtaVariant | undefined;
   className?: string | undefined;
   hash?: string | undefined;
-  onClick?: () => void | undefined;
+  onClick?: (() => void) | undefined;
 }) {
   return (
     <SiteLink
