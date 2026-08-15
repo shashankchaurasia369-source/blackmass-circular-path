@@ -11,7 +11,7 @@ import {
 } from "@/components/site/primitives";
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "Black Mass — LCO, NMC & LFP | BlackMass Energies";
+const TITLE = "Black Mass | LCO, NMC & LFP | BlackMass Energies";
 const DESC =
   "Chemistry-specific Black Mass from lithium-ion battery feedstocks across LCO, NMC and LFP streams, produced with a focus on downstream recovery economics.";
 
@@ -71,14 +71,14 @@ function Page() {
   return (
     <>
       <PageHero
-        eyebrow="Step 03 — Material"
+        eyebrow="Step 03 | Material"
         title={<>Chemistry-Specific Black Mass.</>}
         lead="We produce and supply Black Mass from lithium-ion battery feedstocks, with a focus on chemistry-specific material streams and downstream recovery economics."
         image={blackMassImg}
         imageAlt="Macro photograph of black mass battery powder"
         actions={[
-          { label: "Request Material", to: "/contact", hash: "buy-black-mass" },
-          { label: "Sell Battery Scrap", to: "/contact", hash: "sell-battery-scrap", variant: "outline" },
+          { label: "Request Material", to: "/contact" },
+          { label: "Sell Battery Scrap", to: "/contact", variant: "outline" },
         ]}
       />
 
@@ -113,7 +113,7 @@ function Page() {
 
                   <CtaLink
                     to="/contact"
-                    hash="buy-black-mass"
+
                     className="mt-7 w-full"
                     variant="outline"
                   >
@@ -143,7 +143,7 @@ function Page() {
           </div>
         </Container>
         <Container className="relative mt-10">
-          <CtaLink to="/contact" hash="buy-black-mass">
+          <CtaLink to="/contact">
             Source Material
           </CtaLink>
         </Container>
@@ -176,7 +176,7 @@ function Page() {
         title="Source Black Mass from a qualified producer."
         lead="Tell us your chemistry, volume and delivery requirement."
         actions={[
-          { label: "Source Black Mass", to: "/contact", hash: "buy-black-mass" },
+          { label: "Source Black Mass", to: "/contact" },
           { label: "Partner With Us", to: "/contact", variant: "outline" },
         ]}
       />

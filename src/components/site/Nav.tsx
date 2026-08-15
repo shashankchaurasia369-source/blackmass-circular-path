@@ -131,7 +131,7 @@ export function MobileStickyCta() {
       </SiteLink>
       <SiteLink
         to="/contact"
-        hash="sell-battery-scrap"
+
         className="bg-background py-3.5 text-center text-sm font-medium text-foreground"
       >
         Sell Scrap

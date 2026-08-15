@@ -142,7 +142,7 @@ function Home() {
               <CtaLink to="/contact" variant="outline">
                 Partner With Us
               </CtaLink>
-              <CtaLink to="/contact" hash="sell-battery-scrap" variant="ghost">
+              <CtaLink to="/contact" variant="ghost">
                 Sell Battery Scrap
               </CtaLink>
             </div>
@@ -573,7 +573,7 @@ function Home() {
         lead="Sell battery feedstock, source Black Mass, request critical materials or build a technology partnership."
         actions={[
           { label: "Partner With Us", to: "/contact" },
-          { label: "Sell Battery Scrap", to: "/contact", hash: "sell-battery-scrap", variant: "outline" },
+          { label: "Sell Battery Scrap", to: "/contact", variant: "outline" },
         ]}
       />
     </>
