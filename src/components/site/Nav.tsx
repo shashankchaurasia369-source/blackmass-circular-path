@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Container, SiteLink } from "./primitives";
-import logoMark from "@/assets/logo-mark.png.asset.json";
+import logoMark from "@/assets/black-mass-logo-trim.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -22,11 +22,11 @@ export function Wordmark({ className }: { className?: string }) {
       <img
         src={logoMark.url}
         alt="Black Mass Energies logo"
-        width={36}
-        height={36}
-        className="h-8 w-8 shrink-0 md:h-9 md:w-9"
+        width={120}
+        height={110}
+        className="h-10 w-auto shrink-0 md:h-12"
       />
-      <span className="font-display text-[0.95rem] leading-none font-bold tracking-tight text-inverse-foreground sm:text-[1.05rem]">
+      <span className="font-display text-[1.05rem] leading-none font-bold tracking-tight text-inverse-foreground sm:text-[1.15rem]">
         BLACK MASS
         <span className="ml-1 font-normal text-inverse-muted">ENERGIES</span>
       </span>
@@ -59,7 +59,7 @@ export function Nav() {
         scrolled && "shadow-[0_10px_30px_-20px_rgb(0_0_0/0.5)]",
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-6 md:h-[72px]">
+      <Container className="flex h-[68px] items-center justify-between gap-6 md:h-20">
         <Wordmark />
 
         <nav className="hidden items-center gap-6 xl:flex">
@@ -94,7 +94,7 @@ export function Nav() {
       </Container>
 
       {open ? (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-inverse-border bg-inverse text-inverse-foreground md:top-[72px] xl:hidden">
+        <div className="fixed inset-x-0 top-[68px] bottom-0 z-40 overflow-y-auto border-t border-inverse-border bg-inverse text-inverse-foreground md:top-20 xl:hidden">
           <Container className="flex flex-col py-6">
             {links.map((l) => (
               <SiteLink
