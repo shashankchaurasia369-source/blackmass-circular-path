@@ -10,33 +10,68 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BatteryRecyclingRouteImport } from './routes/battery-recycling'
+import { Route as BlackMassRouteImport } from './routes/black-mass'
+import { Route as CriticalMineralsRouteImport } from './routes/critical-minerals'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BatteryRecyclingRoute = BatteryRecyclingRouteImport.update({
+  id: '/battery-recycling',
+  path: '/battery-recycling',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlackMassRoute = BlackMassRouteImport.update({
+  id: '/black-mass',
+  path: '/black-mass',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CriticalMineralsRoute = CriticalMineralsRouteImport.update({
+  id: '/critical-minerals',
+  path: '/critical-minerals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/battery-recycling': typeof BatteryRecyclingRoute
+  '/black-mass': typeof BlackMassRoute
+  '/critical-minerals': typeof CriticalMineralsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/battery-recycling': typeof BatteryRecyclingRoute
+  '/black-mass': typeof BlackMassRoute
+  '/critical-minerals': typeof CriticalMineralsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/battery-recycling': typeof BatteryRecyclingRoute
+  '/black-mass': typeof BlackMassRoute
+  '/critical-minerals': typeof CriticalMineralsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/battery-recycling' | '/black-mass' | '/critical-minerals'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/battery-recycling' | '/black-mass' | '/critical-minerals'
+  id:
+    | '__root__'
+    | '/'
+    | '/battery-recycling'
+    | '/black-mass'
+    | '/critical-minerals'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BatteryRecyclingRoute: typeof BatteryRecyclingRoute
+  BlackMassRoute: typeof BlackMassRoute
+  CriticalMineralsRoute: typeof CriticalMineralsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +83,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/battery-recycling': {
+      id: '/battery-recycling'
+      path: '/battery-recycling'
+      fullPath: '/battery-recycling'
+      preLoaderRoute: typeof BatteryRecyclingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/black-mass': {
+      id: '/black-mass'
+      path: '/black-mass'
+      fullPath: '/black-mass'
+      preLoaderRoute: typeof BlackMassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/critical-minerals': {
+      id: '/critical-minerals'
+      path: '/critical-minerals'
+      fullPath: '/critical-minerals'
+      preLoaderRoute: typeof CriticalMineralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BatteryRecyclingRoute: BatteryRecyclingRoute,
+  BlackMassRoute: BlackMassRoute,
+  CriticalMineralsRoute: CriticalMineralsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
