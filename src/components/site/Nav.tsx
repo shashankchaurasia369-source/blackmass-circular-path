@@ -17,15 +17,18 @@ const links = [
 
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <Link
-      to="/"
-      className={cn(
-        "font-display text-[1.05rem] leading-none font-bold tracking-tight",
-        className,
-      )}
-    >
-      BLACKMASS<span className="text-primary">&nbsp;/</span>
-      <span className="ml-1 font-normal opacity-70">ENERGIES</span>
+    <Link to="/" className={cn("flex items-center gap-2.5", className)}>
+      <img
+        src={logoMark.url}
+        alt="BlackMass Energies logo"
+        width={36}
+        height={36}
+        className="h-8 w-8 shrink-0 md:h-9 md:w-9"
+      />
+      <span className="font-display text-[0.95rem] leading-none font-bold tracking-tight sm:text-[1.05rem]">
+        BLACKMASS<span className="text-primary">&nbsp;/</span>
+        <span className="ml-1 font-normal opacity-70">ENERGIES</span>
+      </span>
     </Link>
   );
 }
