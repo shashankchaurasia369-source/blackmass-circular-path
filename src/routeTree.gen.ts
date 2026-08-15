@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as BatteryRecyclingRouteImport } from './routes/battery-recycling'
 import { Route as BlackMassRouteImport } from './routes/black-mass'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CriticalMineralsRouteImport } from './routes/critical-minerals'
 import { Route as GlobalSupplyRouteImport } from './routes/global-supply'
 import { Route as LegalRouteImport } from './routes/legal'
@@ -36,6 +37,11 @@ const BatteryRecyclingRoute = BatteryRecyclingRouteImport.update({
 const BlackMassRoute = BlackMassRouteImport.update({
   id: '/black-mass',
   path: '/black-mass',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CriticalMineralsRoute = CriticalMineralsRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
+  '/contact': typeof ContactRoute
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
+  '/contact': typeof ContactRoute
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/battery-recycling': typeof BatteryRecyclingRoute
   '/black-mass': typeof BlackMassRoute
+  '/contact': typeof ContactRoute
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/battery-recycling'
     | '/black-mass'
+    | '/contact'
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/battery-recycling'
     | '/black-mass'
+    | '/contact'
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/battery-recycling'
     | '/black-mass'
+    | '/contact'
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BatteryRecyclingRoute: typeof BatteryRecyclingRoute
   BlackMassRoute: typeof BlackMassRoute
+  ContactRoute: typeof ContactRoute
   CriticalMineralsRoute: typeof CriticalMineralsRoute
   GlobalSupplyRoute: typeof GlobalSupplyRoute
   LegalRoute: typeof LegalRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/black-mass'
       fullPath: '/black-mass'
       preLoaderRoute: typeof BlackMassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/critical-minerals': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BatteryRecyclingRoute: BatteryRecyclingRoute,
   BlackMassRoute: BlackMassRoute,
+  ContactRoute: ContactRoute,
   CriticalMineralsRoute: CriticalMineralsRoute,
   GlobalSupplyRoute: GlobalSupplyRoute,
   LegalRoute: LegalRoute,
