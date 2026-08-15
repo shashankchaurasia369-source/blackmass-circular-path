@@ -17,6 +17,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CriticalMineralsRouteImport } from './routes/critical-minerals'
 import { Route as GlobalSupplyRouteImport } from './routes/global-supply'
 import { Route as LegalRouteImport } from './routes/legal'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TechnologyRouteImport } from './routes/technology'
 
 const IndexRoute = IndexRouteImport.update({
@@ -59,6 +60,11 @@ const LegalRoute = LegalRouteImport.update({
   path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TechnologyRoute = TechnologyRouteImport.update({
   id: '/technology',
   path: '/technology',
@@ -74,6 +80,7 @@ export interface FileRoutesByFullPath {
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +92,7 @@ export interface FileRoutesByTo {
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRoutesById {
@@ -97,6 +105,7 @@ export interface FileRoutesById {
   '/critical-minerals': typeof CriticalMineralsRoute
   '/global-supply': typeof GlobalSupplyRoute
   '/legal': typeof LegalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/technology': typeof TechnologyRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +119,7 @@ export interface FileRouteTypes {
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
+    | '/sitemap.xml'
     | '/technology'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +131,7 @@ export interface FileRouteTypes {
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
+    | '/sitemap.xml'
     | '/technology'
   id:
     | '__root__'
@@ -132,6 +143,7 @@ export interface FileRouteTypes {
     | '/critical-minerals'
     | '/global-supply'
     | '/legal'
+    | '/sitemap.xml'
     | '/technology'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +156,7 @@ export interface RootRouteChildren {
   CriticalMineralsRoute: typeof CriticalMineralsRoute
   GlobalSupplyRoute: typeof GlobalSupplyRoute
   LegalRoute: typeof LegalRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TechnologyRoute: typeof TechnologyRoute
 }
 
@@ -205,6 +218,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/technology': {
       id: '/technology'
       path: '/technology'
@@ -224,6 +244,7 @@ const rootRouteChildren: RootRouteChildren = {
   CriticalMineralsRoute: CriticalMineralsRoute,
   GlobalSupplyRoute: GlobalSupplyRoute,
   LegalRoute: LegalRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport
