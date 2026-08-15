@@ -78,11 +78,8 @@ export function Nav() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <CtaLink to="/contact" variant="outline" className="px-4 py-2 text-[0.8rem]">
-            Partner With Us
-          </CtaLink>
-          <CtaLink to="/contact" className="px-4 py-2 text-[0.8rem]">
-            Get in Touch
+          <CtaLink to="/contact" className="px-5 py-2 text-[0.8rem]">
+            Contact Us
           </CtaLink>
         </div>
 
