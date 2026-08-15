@@ -10,7 +10,7 @@ import {
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 import { ProcessStrip } from "@/components/site/MaterialFlow";
 
-const TITLE = "Battery Recycling | BlackMass Energies";
+const TITLE = "Battery Recycling | Black Mass Energies";
 const DESC =
   "We source and recycle lithium-ion batteries from OEMs and the broader market, converting end-of-life and manufacturing battery streams into valuable secondary raw materials.";
 

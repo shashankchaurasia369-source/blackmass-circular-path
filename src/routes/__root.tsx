@@ -80,9 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BlackMass Energies | Battery Recycling & Critical Battery Materials" },
-      { name: "author", content: "BlackMass Energies Pvt. Ltd." },
-      { property: "og:site_name", content: "BlackMass Energies" },
+      { title: "Black Mass Energies | Battery Recycling & Critical Battery Materials" },
+      { name: "author", content: "Black Mass Energies Pvt. Ltd." },
+      { property: "og:site_name", content: "Black Mass Energies" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

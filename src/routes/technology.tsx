@@ -10,7 +10,7 @@ import {
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 import { MaterialFlow, ProcessStrip } from "@/components/site/MaterialFlow";
 
-const TITLE = "Technology | Hydrometallurgy & Advanced Battery Materials | BlackMass Energies";
+const TITLE = "Technology | Hydrometallurgy & Advanced Battery Materials | Black Mass Energies";
 const DESC =
   "Our technology roadmap focuses on recovering critical minerals from Black Mass with improved selectivity, purity, recovery and process economics.";
 

@@ -58,7 +58,7 @@ export const sendInquiry = createServerFn({ method: "POST" })
       body: JSON.stringify({
         from:
           process.env["INQUIRY_FROM_EMAIL"] ??
-          "BlackMass Energies <onboarding@resend.dev>",
+          "Black Mass Energies <onboarding@resend.dev>",
         to: [process.env["INQUIRY_TO_EMAIL"] ?? "info@blackmaskenergies.com"],
         reply_to: data.email,
         subject: `Website inquiry from ${data.name}`,

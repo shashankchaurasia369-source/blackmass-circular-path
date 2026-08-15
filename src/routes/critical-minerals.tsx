@@ -9,7 +9,7 @@ import {
 } from "@/components/site/primitives";
 import { PageHero, CtaBand } from "@/components/site/PageHero";
 
-const TITLE = "Critical Minerals | Lithium, Nickel, Cobalt, Manganese | BlackMass Energies";
+const TITLE = "Critical Minerals | Lithium, Nickel, Cobalt, Manganese | Black Mass Energies";
 const DESC =
   "Recovering lithium, nickel, cobalt and manganese from Black Mass through hydrometallurgy and converting them into high-purity battery material products.";
 

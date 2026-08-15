@@ -21,14 +21,14 @@ export function Wordmark({ className }: { className?: string }) {
     <Link to="/" className={cn("flex items-center gap-2.5", className)}>
       <img
         src={logoMark.url}
-        alt="BlackMass Energies logo"
+        alt="Black Mass Energies logo"
         width={36}
         height={36}
-        className="h-8 w-8 shrink-0 md:h-9 md:w-9"
+        className="h-8 w-8 shrink-0 brightness-0 invert md:h-9 md:w-9"
       />
-      <span className="font-display text-[0.95rem] leading-none font-bold tracking-tight sm:text-[1.05rem]">
-        BLACKMASS<span className="text-primary">&nbsp;/</span>
-        <span className="ml-1 font-normal opacity-70">ENERGIES</span>
+      <span className="font-display text-[0.95rem] leading-none font-bold tracking-tight text-foreground sm:text-[1.05rem]">
+        BLACK MASS<span className="text-primary">&nbsp;/</span>
+        <span className="ml-1 font-normal opacity-80">ENERGIES</span>
       </span>
     </Link>
   );
@@ -57,8 +57,8 @@ export function Nav() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-border bg-background/85 backdrop-blur-xl"
-          : "border-b border-transparent",
+          ? "border-b border-border bg-background/90 backdrop-blur-xl"
+          : "border-b border-white/10 bg-background/60 backdrop-blur-md",
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-6 md:h-[72px]">

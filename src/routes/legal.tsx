@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Container, Section } from "@/components/site/primitives";
 import { PageHero } from "@/components/site/PageHero";
 
-const TITLE = "Legal | Privacy, Terms & Disclaimer | BlackMass Energies";
+const TITLE = "Legal | Privacy, Terms & Disclaimer | Black Mass Energies";
 const DESC =
-  "Privacy policy, terms of use and disclaimer for the BlackMass Energies Pvt. Ltd. website and material inquiries.";
+  "Privacy policy, terms of use and disclaimer for the Black Mass Energies Pvt. Ltd. website and material inquiries.";
 
 export const Route = createFileRoute("/legal")({
   head: () => ({
@@ -59,7 +59,7 @@ function Page() {
       <PageHero
         eyebrow="Legal"
         title="Legal information."
-        lead="Privacy, terms of use and disclaimer for the BlackMass Energies website and material inquiries."
+        lead="Privacy, terms of use and disclaimer for the Black Mass Energies website and material inquiries."
       />
       <Section>
         <Container className="max-w-3xl">

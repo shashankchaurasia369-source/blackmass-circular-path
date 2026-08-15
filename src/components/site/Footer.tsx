@@ -52,7 +52,7 @@ export function Footer() {
               Building the circular supply chain for critical battery materials.
             </p>
             <p className="tech-label mt-8 text-muted-foreground">
-              BlackMass Energies Pvt. Ltd., India
+              Black Mass Energies Pvt. Ltd., India
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export function Footer() {
             Recover. Refine. Rebuild.
           </p>
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} BlackMass Energies Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Black Mass Energies Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
             <SiteLink to="/legal" hash="privacy" className="hover:text-primary">

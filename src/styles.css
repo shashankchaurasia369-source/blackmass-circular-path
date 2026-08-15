@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BlackMass Energies design system.
+ * Black Mass Energies design system.
  * Industrial / scientific / premium. Near-black green-tinted base,
  * restrained mint accent, off-white inverse sections, technical grids.
  */
@@ -64,9 +64,9 @@
   --popover-foreground: oklch(0.96 0.006 160);
 
   /* Restrained mint accent */
-  --primary: oklch(0.86 0.2 128);
+  --primary: #a7f3d0;
   --primary-foreground: oklch(0.17 0.03 165);
-  --accent: oklch(0.86 0.2 128);
+  --accent: #a7f3d0;
   --accent-foreground: oklch(0.17 0.03 165);
 
   --secondary: oklch(0.26 0.017 166);
@@ -81,7 +81,7 @@
   --border: oklch(0.3 0.014 166);
   --border-strong: oklch(0.4 0.018 166);
   --input: oklch(0.3 0.014 166);
-  --ring: oklch(0.86 0.2 128);
+  --ring: #a7f3d0;
 
   /* Inverse (off-white) sections */
   --inverse: oklch(0.965 0.005 150);
@@ -90,11 +90,11 @@
   --inverse-border: oklch(0.88 0.008 155);
 
   /* Effects */
-  --glow-accent: 0 0 80px -20px oklch(0.86 0.2 128 / 0.5);
+  --glow-accent: 0 0 80px -20px rgb(167 243 208 / 0.5);
   --gradient-haze:
     radial-gradient(
       ellipse 80% 60% at 50% 0%,
-      oklch(0.86 0.2 128 / 0.12),
+      rgb(167 243 208 / 0.12),
       transparent 70%
     );
   --grid-line: oklch(1 0 0 / 0.045);
