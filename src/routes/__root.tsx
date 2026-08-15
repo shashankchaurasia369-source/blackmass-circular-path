@@ -99,6 +99,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Black Mass Energies Pvt. Ltd.",
+          url: "https://blackmass-circular-path.lovable.app",
+          logo: "https://blackmass-circular-path.lovable.app/favicon.png",
+          description:
+            "Integrated battery recycling and critical battery materials company building the circular supply chain.",
+          address: { "@type": "PostalAddress", addressCountry: "IN" },
+          email: "info@blackmaskenergies.com",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
