@@ -133,7 +133,7 @@ export function MobileStickyCta() {
         to="/contact"
         className="block bg-primary py-3.5 text-center text-sm font-medium text-primary-foreground"
       >
-        Contact Us
+        Partner With Us
       </SiteLink>
     </div>
   );
