@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Container, SiteLink } from "./primitives";
-import logoMark from "@/assets/black-mass-logo.svg.asset.json";
+import logoMark from "@/assets/black-mass-logo-trim.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -22,9 +22,9 @@ export function Wordmark({ className }: { className?: string }) {
       <img
         src={logoMark.url}
         alt="Black Mass Energies logo"
-        width={56}
-        height={56}
-        className="h-11 w-11 shrink-0 md:h-14 md:w-14"
+        width={120}
+        height={110}
+        className="h-10 w-auto shrink-0 md:h-12"
       />
       <span className="font-display text-[1.05rem] leading-none font-bold tracking-tight text-inverse-foreground sm:text-[1.15rem]">
         BLACK MASS
