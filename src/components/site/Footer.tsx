@@ -1,5 +1,4 @@
-import { Link } from "@tanstack/react-router";
-import { Container } from "./primitives";
+import { Container, SiteLink } from "./primitives";
 import { Wordmark } from "./Nav";
 
 const groups: { title: string; items: { label: string; to: string; hash?: string }[] }[] = [
@@ -63,13 +62,13 @@ export function Footer() {
               <ul className="mt-5 space-y-3">
                 {g.items.map((i) => (
                   <li key={i.label + i.to + (i.hash ?? "")}>
-                    <Link
+                    <SiteLink
                       to={i.to}
                       hash={i.hash}
                       className="text-sm text-muted-foreground transition-colors hover:text-primary"
                     >
                       {i.label}
-                    </Link>
+                    </SiteLink>
                   </li>
                 ))}
               </ul>
@@ -85,15 +84,15 @@ export function Footer() {
             © {new Date().getFullYear()} BlackMass Energies Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
-            <Link to="/legal" hash="privacy" className="hover:text-primary">
+            <SiteLink to="/legal" hash="privacy" className="hover:text-primary">
               Privacy Policy
-            </Link>
-            <Link to="/legal" hash="terms" className="hover:text-primary">
+            </SiteLink>
+            <SiteLink to="/legal" hash="terms" className="hover:text-primary">
               Terms
-            </Link>
-            <Link to="/legal" hash="disclaimer" className="hover:text-primary">
+            </SiteLink>
+            <SiteLink to="/legal" hash="disclaimer" className="hover:text-primary">
               Disclaimer
-            </Link>
+            </SiteLink>
           </div>
         </div>
       </Container>

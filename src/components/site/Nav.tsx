@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Container, CtaLink } from "./primitives";
+import { Container, CtaLink, SiteLink } from "./primitives";
 
 const links = [
   { to: "/", label: "Home" },

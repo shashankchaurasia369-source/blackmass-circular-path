@@ -20,8 +20,8 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
           setVisible(true);
           io.disconnect();
         }
@@ -180,27 +180,56 @@ const ctaStyles: Record<CtaVariant, string> = {
 const ctaBase =
   "inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3 text-sm font-medium tracking-tight transition-all duration-300";
 
+export function SiteLink({
+  to,
+  hash,
+  className,
+  children,
+  onClick,
+}: {
+  to: string;
+  hash?: string;
+  className?: string;
+  children: ReactNode;
+  onClick?: () => void;
+}) {
+  const extra = (hash ? { hash } : {}) as Record<string, unknown>;
+  return (
+    <Link
+      to={to as never}
+      {...extra}
+      className={className as string}
+      onClick={onClick as never}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export function CtaLink({
   to,
   children,
   variant = "primary",
   className,
   hash,
+  onClick,
 }: {
   to: string;
   children: ReactNode;
   variant?: CtaVariant;
   className?: string;
   hash?: string;
+  onClick?: () => void;
 }) {
   return (
-    <Link
+    <SiteLink
       to={to}
       hash={hash}
+      onClick={onClick}
       className={cn(ctaBase, ctaStyles[variant], className)}
     >
       {children}
-    </Link>
+    </SiteLink>
   );
 }
 
